@@ -1,7 +1,7 @@
 {
   "name": "noesis2hzw",
   "description": "Convert structures and data sets defined in Noesis Studio to Horizon Worlds compatible typescript files.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Richard Lee <richard.lee@y0software.com>",
   "repository": {
     "type": "git",
