@@ -187,8 +187,8 @@ export function outputTypes(structures: NoesisStructureMap, scriptsPath: string,
     if (isVerbose) {
       console.log(`- ${structure.name}`);
     }
-    output.write(`// Definition for ${structure.name}\n`);
     if (structure.type === "Class") {
+      output.write(`// Definition for structure ${structure.name}\n`);
       output.write(`export type ${structure.name} = {\n`);
       structure.properties.forEach((property, propName) => {
         let type: string;
@@ -229,6 +229,7 @@ export function outputTypes(structures: NoesisStructureMap, scriptsPath: string,
       });
       output.write(`}\n\n`);
     } else if (structure.type === "Enum") {
+      output.write(`// Definition for enum ${structure.name}\n`);
       output.write(`export enum ${structure.name} {\n`);
       structure.items.forEach((value, itemName) => {
         output.write(`${indent}"${itemName}" = "${itemName}",\n`);
